@@ -3,22 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AUR.THENTIC APPAREL — Wear Your Aura</title>
-  <meta name="description" content="AUR.THENTIC APPAREL. SMMR26 COMMANDMENTS Collection. Wear Your Aura. Authenticity is the identity.">
-  <link rel="canonical" href="https://aurthentic.co.za/">
-
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="AUR.THENTIC APPAREL — SMMR26 COMMANDMENTS">
-  <meta property="og:description" content="Wear Your Aura. Authenticity is the identity.">
-  <meta property="og:image" content="/og/default.jpg">
-  <meta property="og:locale" content="en_ZA">
-  <meta name="twitter:card" content="summary_large_image">
-
+  <title>Collection — AUR.THENTIC APPAREL</title>
+  <meta name="description" content="Shop the AUR.THENTIC SMMR26 COMMANDMENTS collection. Limited pieces. Delivered across South Africa.">
+  <link rel="canonical" href="https://aurthentic.co.za/collection.html">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-  <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png">
   <link rel="manifest" href="/favicon/site.webmanifest">
-
   <link rel="stylesheet" href="/css/reset.css">
   <link rel="stylesheet" href="/css/tokens.css">
   <link rel="stylesheet" href="/css/base.css">
@@ -26,15 +15,15 @@
 </head>
 <body>
 
-  <!-- NAV -->
+  <!-- Reuse nav and drawer from index (copy exactly) -->
   <header class="nav" data-nav>
     <div class="container nav__inner">
-      <button class="nav__icon-btn" data-menu-open aria-label="Open menu" style="display:flex;">
+      <button class="nav__icon-btn" data-menu-open aria-label="Open menu">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
       <nav class="nav__links">
-        <a class="nav__link" href="/collection.html">Shop</a>
-        <a class="nav__link" href="#philosophy">Philosophy</a>
+        <a class="nav__link" href="/frontEnd/collection.html">Shop</a>
+        <a class="nav__link" href="/#philosophy">Philosophy</a>
       </nav>
       <a class="nav__brand" href="/">AUR.THENTIC</a>
       <div class="nav__actions">
@@ -47,7 +36,6 @@
     </div>
   </header>
 
-  <!-- MOBILE MENU -->
   <div class="mobile-menu">
     <div class="mobile-menu__header">
       <span class="eyebrow">Menu</span>
@@ -56,13 +44,12 @@
       </button>
     </div>
     <nav class="mobile-menu__nav">
-      <a href="/collection.html">Shop</a>
-      <a href="#philosophy">Philosophy</a>
+      <a href="/frontEnd/collection.html">Shop</a>
+      <a href="/#philosophy">Philosophy</a>
       <a href="https://www.instagram.com/aur.thentic_apparel/" target="_blank" rel="noopener">Instagram</a>
     </nav>
   </div>
 
-  <!-- CART DRAWER -->
   <div class="drawer" data-cart-drawer role="dialog" aria-label="Cart">
     <div class="drawer__backdrop"></div>
     <aside class="drawer__panel">
@@ -78,62 +65,21 @@
   </div>
 
   <main>
-    <!-- HERO -->
-    <section class="hero">
-      <div class="hero__media">
-        <img src="/images/hero.jpg" alt="AUR.THENTIC SMMR26 COMMANDMENTS Collection">
-      </div>
-      <div class="container hero__content">
-        <p class="eyebrow hero__season">SMMR26</p>
-        <h1 class="hero__title">COMMANDMENTS</h1>
-        <p class="hero__subtitle">COMMAND I — THOU SHALT NEVER BE FAKE</p>
-        <a href="/product.html?slug=command-i" class="btn">
-          View the piece
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-      </div>
-    </section>
-
-    <!-- FEATURED PRODUCTS -->
-    <section class="section">
+    <section class="section-tight">
       <div class="container">
-        <div class="section-head">
-          <div>
-            <p class="eyebrow">SMMR26</p>
-            <h2 class="section-head__title">The Drop</h2>
-          </div>
-          <a href="/collection.html" class="btn btn--ghost">
-            View all
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-        </div>
-        <div class="product-grid" data-featured-grid>
-          <div class="skeleton" style="aspect-ratio:4/5;"></div>
-          <div class="skeleton" style="aspect-ratio:4/5;"></div>
-          <div class="skeleton" style="aspect-ratio:4/5;"></div>
-        </div>
+        <p class="eyebrow">SMMR26</p>
+        <h1 style="margin:0.5rem 0 0.75rem;">COMMANDMENTS</h1>
+        <p class="eyebrow" data-collection-count style="color:var(--earth);"></p>
       </div>
     </section>
 
-    <!-- PHILOSOPHY -->
-    <section id="philosophy" class="section divider">
+    <section style="padding-bottom:6rem;">
       <div class="container">
-        <div class="philosophy">
-          <p class="eyebrow" style="margin-bottom:1.5rem;">The Philosophy</p>
-          <p class="philosophy__quote">In a world where fitting in is often rewarded, authenticity becomes an act of courage.</p>
-          <p>This piece is a reminder that your greatest strength is not becoming someone else. It is becoming fully yourself.</p>
-          <p>To wear this is to reject imitation, embrace truth, and move through life without hiding behind trends or expectations.</p>
+        <div class="product-grid" data-collection-grid>
+          <div class="skeleton" style="aspect-ratio:4/5;"></div>
+          <div class="skeleton" style="aspect-ratio:4/5;"></div>
+          <div class="skeleton" style="aspect-ratio:4/5;"></div>
         </div>
-      </div>
-    </section>
-
-    <!-- INSTAGRAM -->
-    <section class="section divider">
-      <div class="container ig-cta">
-        <p class="eyebrow" style="margin-bottom:1rem;">Follow the movement</p>
-        <a class="ig-cta__handle" href="https://www.instagram.com/aur.thentic_apparel/" target="_blank" rel="noopener">
-          @aur.thentic_apparel
-        </a>
       </div>
     </section>
   </main>
@@ -148,9 +94,9 @@
         <div>
           <p class="footer__heading">Shop</p>
           <ul class="footer__list">
-            <li><a href="/collection.html">Collection</a></li>
-            <li><a href="/product.html?slug=command-i">Command I</a></li>
-            <li><a href="/cart.html">Cart</a></li>
+            <li><a href="/frontEnd/collection.html">Collection</a></li>
+            <li><a href="/frontEnd/product.html?slug=command-i">Command I</a></li>
+            <li><a href="/frontEnd/cart.html">Cart</a></li>
           </ul>
         </div>
         <div>
@@ -164,8 +110,8 @@
       <div class="footer__bottom">
         <p>&copy; <span data-year></span> AUR.THENTIC APPAREL. All rights reserved.</p>
         <div class="footer__legal">
-          <a href="/privacy.html">Privacy Policy</a>
-          <a href="/terms.html">Terms &amp; Conditions</a>
+          <a href="/frontEnd/privacy.html">Privacy Policy</a>
+          <a href="/frontEnd/terms.html">Terms &amp; Conditions</a>
         </div>
       </div>
     </div>
@@ -173,6 +119,6 @@
 
   <script>document.querySelectorAll('[data-year]').forEach(el => el.textContent = new Date().getFullYear());</script>
   <script type="module" src="/js/main.js"></script>
-  <script type="module" src="/js/home.js"></script>
+  <script type="module" src="/js/collection.js"></script>
 </body>
 </html>
