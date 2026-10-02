@@ -9,8 +9,8 @@
     "description": "Heavyweight cotton tee. Relaxed fit. Printed graphic.\n\n[PLACEHOLDER: Replace with final product specifications once confirmed.]",
     "concept": "In a world where fitting in is often rewarded, authenticity becomes an act of courage. This piece is a reminder that your greatest strength is not becoming someone else. It is becoming fully yourself.\n\nTo wear this is to reject imitation, embrace truth, and move through life without hiding behind trends or expectations.",
     "images": [
-      { "url": "/images/products/command-i-01.jpg", "alt": "COMMAND I front" },
-      { "url": "/images/products/command-i-02.jpg", "alt": "COMMAND I back" }
+      { "url": "/images/products/command-i-01.png", "alt": "COMMAND I front" },
+      { "url": "/images/products/command-i-02.png", "alt": "COMMAND I back" }
     ],
     "variants": [
       { "id": "var-s", "size": "S", "stock": 0 },
