@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /checkout.html
+Disallow: /success.html
+
+Sitemap: https://aurthentic.co.za/sitemap.xml

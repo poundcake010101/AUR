@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en-ZA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout — AUR.THENTIC APPAREL</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/components.css">
+</head>
+<body>
+
+  <!-- Same header (no cart drawer needed on checkout, but harmless to include) -->
+
+  <main>
+    <section class="section-tight">
+      <div class="container" style="max-width:72rem;">
+        <h1 style="margin-bottom:2.5rem;">Checkout</h1>
+
+        <form class="checkout-layout" data-checkout-form novalidate>
+          <div class="stack-8">
+            <fieldset>
+              <legend class="eyebrow">Contact</legend>
+              <div class="field-group">
+                <label class="field">
+                  <span class="field__label">Email</span>
+                  <input class="input" type="email" name="email" autocomplete="email" required>
+                </label>
+                <label class="field">
+                  <span class="field__label">Mobile number</span>
+                  <input class="input" type="tel" name="phone" autocomplete="tel" placeholder="0762734505" required>
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend class="eyebrow">Shipping</legend>
+              <div class="field-group">
+                <div class="field-group field-group--2">
+                  <label class="field">
+                    <span class="field__label">First name</span>
+                    <input class="input" type="text" name="firstName" autocomplete="given-name" required>
+                  </label>
+                  <label class="field">
+                    <span class="field__label">Last name</span>
+                    <input class="input" type="text" name="lastName" autocomplete="family-name" required>
+                  </label>
+                </div>
+                <label class="field">
+                  <span class="field__label">Address line 1</span>
+                  <input class="input" type="text" name="addressLine1" autocomplete="address-line1" required>
+                </label>
+                <label class="field">
+                  <span class="field__label">Address line 2 (optional)</span>
+                  <input class="input" type="text" name="addressLine2" autocomplete="address-line2">
+                </label>
+                <div class="field-group field-group--2">
+                  <label class="field">
+                    <span class="field__label">City</span>
+                    <input class="input" type="text" name="city" autocomplete="address-level2" required>
+                  </label>
+                  <label class="field">
+                    <span class="field__label">Postal code</span>
+                    <input class="input" type="text" name="postalCode" autocomplete="postal-code" required>
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend class="eyebrow">Delivery method</legend>
+              <label class="radio">
+                <input type="radio" name="deliveryMethod" value="pargo-pickup" checked>
+                <span>Pargo pickup point — R65.00</span>
+              </label>
+              <label class="radio">
+                <input type="radio" name="deliveryMethod" value="pargo-home">
+                <span>Pargo home delivery — R95.00</span>
+              </label>
+            </fieldset>
+
+            <fieldset>
+              <legend class="eyebrow">Order notes (optional)</legend>
+              <label class="field">
+                <textarea class="input" name="notes" rows="3" maxlength="500" placeholder="Any special instructions"></textarea>
+              </label>
+            </fieldset>
+          </div>
+
+          <aside class="checkout-summary">
+            <div data-checkout-summary></div>
+            <p class="form-error" data-checkout-error role="alert" style="margin-top:1rem;display:block;min-height:1rem;"></p>
+            <button class="btn btn--full" type="submit" data-checkout-submit style="margin-top:1rem;">Pay with Yoco</button>
+            <p style="font-size:0.75rem;color:var(--earth);margin-top:1rem;">
+              You will be redirected to Yoco to complete payment securely. Card details never touch our servers.
+            </p>
+          </aside>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Same footer as other pages -->
+
+  <script>document.querySelectorAll('[data-year]').forEach(el => el.textContent = new Date().getFullYear());</script>
+  <script type="module" src="/js/main.js"></script>
+  <script type="module" src="/js/checkout.js"></script>
+</body>
+</html>

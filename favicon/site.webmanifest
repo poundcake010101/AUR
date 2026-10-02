@@ -1,0 +1,13 @@
+{
+  "name": "AUR.THENTIC APPAREL",
+  "short_name": "AUR.THENTIC",
+  "description": "Wear Your Aura. SMMR26 COMMANDMENTS Collection.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A0A0A",
+  "theme_color": "#0A0A0A",
+  "icons": [
+    { "src": "/favicon/favicon-32x32.png", "sizes": "32x32", "type": "image/png" },
+    { "src": "/favicon/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}

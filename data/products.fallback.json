@@ -1,0 +1,23 @@
+[
+  {
+    "id": "00000000-0000-0000-0000-000000000001",
+    "name": "COMMAND I",
+    "slug": "command-i",
+    "price": 899.00,
+    "collection": "SMMR26 COMMANDMENTS",
+    "season": "SMMR26",
+    "description": "Heavyweight cotton tee. Relaxed fit. Printed graphic.\n\n[PLACEHOLDER: Replace with final product specifications once confirmed.]",
+    "concept": "In a world where fitting in is often rewarded, authenticity becomes an act of courage. This piece is a reminder that your greatest strength is not becoming someone else. It is becoming fully yourself.\n\nTo wear this is to reject imitation, embrace truth, and move through life without hiding behind trends or expectations.",
+    "images": [
+      { "url": "/images/products/command-i-01.jpg", "alt": "COMMAND I front" },
+      { "url": "/images/products/command-i-02.jpg", "alt": "COMMAND I back" }
+    ],
+    "variants": [
+      { "id": "var-s", "size": "S", "stock": 0 },
+      { "id": "var-m", "size": "M", "stock": 0 },
+      { "id": "var-l", "size": "L", "stock": 0 },
+      { "id": "var-xl", "size": "XL", "stock": 0 },
+      { "id": "var-xxl", "size": "XXL", "stock": 0 }
+    ]
+  }
+]

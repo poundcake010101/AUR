@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en-ZA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Product — AUR.THENTIC APPAREL</title>
+  <meta name="description" content="Shop the AUR.THENTIC SMMR26 COMMANDMENTS collection.">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/components.css">
+</head>
+<body>
+
+  <!-- Same header, mobile menu, and drawer as collection.html -->
+
+  <header class="nav" data-nav>
+    <div class="container nav__inner">
+      <button class="nav__icon-btn" data-menu-open aria-label="Open menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+      <nav class="nav__links">
+        <a class="nav__link" href="/collection.html">Shop</a>
+        <a class="nav__link" href="/#philosophy">Philosophy</a>
+      </nav>
+      <a class="nav__brand" href="/">AUR.THENTIC</a>
+      <div class="nav__actions">
+        <a class="nav__link" href="https://www.instagram.com/aur.thentic_apparel/" target="_blank" rel="noopener" style="padding-right:0.5rem;">IG</a>
+        <button class="nav__icon-btn" data-cart-open aria-label="Open cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="nav__cart-count" data-cart-count>0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu">
+    <div class="mobile-menu__header">
+      <span class="eyebrow">Menu</span>
+      <button class="nav__icon-btn" data-menu-close aria-label="Close menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-menu__nav">
+      <a href="/collection.html">Shop</a>
+      <a href="/#philosophy">Philosophy</a>
+      <a href="https://www.instagram.com/aur.thentic_apparel/" target="_blank" rel="noopener">Instagram</a>
+    </nav>
+  </div>
+
+  <div class="drawer" data-cart-drawer role="dialog" aria-label="Cart">
+    <div class="drawer__backdrop"></div>
+    <aside class="drawer__panel">
+      <div class="drawer__header">
+        <span class="eyebrow">Cart</span>
+        <button class="nav__icon-btn" data-cart-close aria-label="Close cart">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div class="drawer__body" data-cart-drawer-body></div>
+      <div class="drawer__footer" data-cart-drawer-footer></div>
+    </aside>
+  </div>
+
+  <main>
+    <div data-product-root>
+      <div class="container section-tight">
+        <div class="product-layout">
+          <div class="skeleton" style="aspect-ratio:4/5;"></div>
+          <div class="stack-6">
+            <div class="skeleton" style="height:1rem;width:40%;"></div>
+            <div class="skeleton" style="height:2rem;width:70%;"></div>
+            <div class="skeleton" style="height:1.25rem;width:30%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand">AUR.THENTIC APPAREL</p>
+          <p class="footer__tagline">Wear Your Aura. Authenticity is the identity.</p>
+        </div>
+        <div>
+          <p class="footer__heading">Shop</p>
+          <ul class="footer__list">
+            <li><a href="/collection.html">Collection</a></li>
+            <li><a href="/product.html?slug=command-i">Command I</a></li>
+            <li><a href="/cart.html">Cart</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__heading">Connect</p>
+          <ul class="footer__list">
+            <li><a href="https://www.instagram.com/aur.thentic_apparel/" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://wa.me/27762734505" target="_blank" rel="noopener">WhatsApp</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; <span data-year></span> AUR.THENTIC APPAREL. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.querySelectorAll('[data-year]').forEach(el => el.textContent = new Date().getFullYear());</script>
+  <script type="module" src="/js/main.js"></script>
+  <script type="module" src="/js/product.js"></script>
+</body>
+</html>

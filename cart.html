@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en-ZA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cart — AUR.THENTIC APPAREL</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/components.css">
+</head>
+<body>
+
+  <!-- Same header and drawer markup as collection.html -->
+
+  <main>
+    <section class="section-tight">
+      <div class="container" style="max-width:48rem;">
+        <h1 style="margin-bottom:2rem;">Cart</h1>
+        <div data-cart-page></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Same footer as collection.html -->
+
+  <script>document.querySelectorAll('[data-year]').forEach(el => el.textContent = new Date().getFullYear());</script>
+  <script type="module" src="/js/main.js"></script>
+  <script type="module">
+    import { cart } from '/js/cart.js';
+    import { formatZAR, escapeHtml } from '/js/ui.js';
+
+    const el = document.querySelector('[data-cart-page]');
+    function render() {
+      const items = cart.items;
+      if (items.length === 0) {
+        el.innerHTML = `
+          <p style="color:var(--earth);margin-bottom:1.5rem;">Your cart is empty.</p>
+          <a href="/collection.html" class="btn">Shop the drop</a>`;
+        return;
+      }
+      el.innerHTML = `
+        <div>${items.map((i) => `
+          <div class="cart-line" data-variant="${i.variantId}">
+            <div class="cart-line__media">${i.image ? `<img src="${i.image}" alt="">` : ''}</div>
+            <div>
+              <div class="cart-line__head">
+                <div>
+                  <div class="cart-line__name">${escapeHtml(i.name)}</div>
+                  <div class="cart-line__meta">Size ${escapeHtml(i.size)}</div>
+                </div>
+                <button data-remove class="cart-line__remove">Remove</button>
+              </div>
+              <div class="cart-line__row">
+                <div class="cart-line__qty">
+                  <button data-dec>−</button><span>${i.quantity}</span><button data-inc>+</button>
+                </div>
+                <div>${formatZAR(i.price * i.quantity)}</div>
+              </div>
+            </div>
+          </div>`).join('')}
+        </div>
+        <div class="stack-4" style="margin-top:2rem;border-top:1px solid var(--whisper);padding-top:2rem;">
+          <div class="cart-summary"><span class="cart-summary__label">Subtotal</span><span>${formatZAR(cart.subtotal())}</span></div>
+          <p style="font-size:0.75rem;color:var(--earth);">Shipping calculated at checkout.</p>
+          <a href="/checkout.html" class="btn btn--full">Checkout</a>
+          <a href="/collection.html" class="btn btn--outline btn--full">Continue shopping</a>
+        </div>`;
+
+      el.querySelectorAll('.cart-line').forEach((line) => {
+        const id = line.dataset.variant;
+        line.querySelector('[data-remove]')?.addEventListener('click', () => cart.remove(id));
+        line.querySelector('[data-inc]')?.addEventListener('click', () => {
+          const item = cart.items.find((x) => x.variantId === id);
+          if (item) cart.updateQuantity(id, item.quantity + 1);
+        });
+        line.querySelector('[data-dec]')?.addEventListener('click', () => {
+          const item = cart.items.find((x) => x.variantId === id);
+          if (!item) return;
+          if (item.quantity <= 1) cart.remove(id);
+          else cart.updateQuantity(id, item.quantity - 1);
+        });
+      });
+    }
+    cart.subscribe(render);
+    render();
+  </script>
+</body>
+</html>

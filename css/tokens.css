@@ -1,0 +1,40 @@
+:root {
+  /* Palette */
+  --void: #0A0A0A;
+  --ink: #141414;
+  --whisper: #2A2A2A;
+  --bone: #E8E4DF;
+  --chalk: #F5F3F0;
+  --earth: #8A8378;
+
+  /* Type */
+  --font-display: 'Times New Roman', 'Georgia', serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Helvetica Neue', Arial, sans-serif;
+
+  --fs-display-xl: clamp(3rem, 10vw, 8rem);
+  --fs-display-lg: clamp(2rem, 6vw, 4.5rem);
+  --fs-display-md: clamp(1.5rem, 4vw, 3rem);
+  --fs-label: 0.6875rem;
+  --fs-body: 0.9375rem;
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
+
+  --container: 1440px;
+  --container-pad: clamp(1.25rem, 4vw, 4rem);
+
+  /* Border */
+  --hairline: 1px solid var(--whisper);
+
+  /* Motion */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur: 220ms;
+}
